@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,9 +8,10 @@
     <title>skate</title>
   </head>
   <body>
-
+    <!-- container principal com todo o conteúdo -->
     <div class="container">
       <header id="header">
+        <!-- Barra de navegação do site -->
         <div class="header-itens">
           <img src="images/header/LOGO.png" alt="logo">
           <div class="desktop-menu">
@@ -58,24 +59,53 @@
           <!-- carrossel de itens com desconto -->
           <div class="carousel-wrapper">
             <div class="carousel">
-              <div class="carousel-img">
+              <div class="carousel-img" draggable="false">
                 <img src="images/content/tenis-1-formatado.png" alt="">
               </div>
-              <div class="carousel-img">
+              <div class="carousel-img" draggable="false">
                 <img src="images/content/tenis-2-formatado.png" alt="">
               </div>
-              <div class="carousel-img">
+              <div class="carousel-img" id="checked" draggable="false">
                 <img src="images/content/tenis-3-formatado.png" alt="">
               </div>
-              <div class="carousel-img">
+              <div class="carousel-img" draggable="false">
                 <img src="images/content/tenis-4-formatado.png" alt="">
               </div>
-              <div class="carousel-img">
+              <div class="carousel-img" draggable="false">
                 <img src="images/content/tenis-5-formatado.png" alt="">
               </div>
             </div>
         </div>
+        <div class="slider-browser">
+          <!-- botões de navegação do carrossel -->
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+        </div>
       </div>
+
+      <div class="promo-kits">
+        <h3>KITS EM PROMOÇÃO</h3>
+          <div class="kits-div">
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa bulls.png" alt="">
+          </div>
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa high.png" alt="">
+          </div>
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa high boys.png" alt="">
+          </div>
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa nike sb.png" alt="">
+          </div>
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa vans.png" alt="">
+          </div>
+      </div>
+      <div></div>
     </div>
 
   </body>

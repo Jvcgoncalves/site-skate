@@ -18,13 +18,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background: #DDDDDD;
+  background: #EBEBEB;
 }
 
 #header {
   width: 100%;
-  height: 6.5rem;
-  background: #C90A02;
+  height: 6rem;
+  background: #B00700;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,9 +47,9 @@
   gap: 1.56rem;
 }
 .header-itens .desktop-menu .itens-desktop-menu {
-  font-family: "Kanit", sans-serif;
+  font-family: "Kanit", sans-serif, sans-serif;
   font-size: 1.3rem;
-  color: #222222;
+  color: #F3F4E8;
 }
 .header-itens .user-desktop-menu {
   display: flex;
@@ -78,11 +78,12 @@
 }
 
 .content {
-  padding: 0 3.5rem;
   display: grid;
 }
 
 .discount-itens-carousel {
+  padding: 0 3.5rem;
+  position: relative;
   display: flex;
   width: 44rem;
   height: 25rem;
@@ -94,13 +95,17 @@
   width: 100%;
   display: flex;
   overflow: hidden;
+  scroll-behavior: auto;
 }
 .discount-itens-carousel .carousel-wrapper .carousel {
   position: relative;
-  width: 200%;
-  display: flex;
-  gap: 3.125rem;
+  width: 500%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
   pointer-events: none;
+  scroll-behavior: smooth;
+  transition: 0.5s;
 }
 .discount-itens-carousel .carousel-img {
   width: 25rem;
@@ -109,6 +114,64 @@
 .discount-itens-carousel .carousel-img img {
   width: 25rem;
   height: 23rem;
+}
+.discount-itens-carousel .slider-browser {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.promo-kits {
+  padding: 0 3.5rem;
+  margin-top: 2.5rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #212020;
+}
+.promo-kits h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  color: none;
+  background: linear-gradient(180deg, #F3F4E8 10%, #B00700 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.promo-kits .kits-div {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-areas: "image_1 image_2 image_5" "image_3 image_4 image_5";
+}
+.promo-kits .kits-div .kits-img {
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+}
+.promo-kits .kits-div .kits-img:first-child {
+  grid-area: image_1;
+}
+.promo-kits .kits-div .kits-img:nth-child(2) {
+  grid-area: image_2;
+}
+.promo-kits .kits-div .kits-img:nth-child(3) {
+  grid-area: image_5;
+  width: 15rem;
+  height: auto;
+}
+.promo-kits .kits-div .kits-img:nth-child(4) {
+  grid-area: image_3;
+}
+.promo-kits .kits-div .kits-img:nth-child(5) {
+  grid-area: image_4;
+}
+.promo-kits .kits-div .kit-images {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

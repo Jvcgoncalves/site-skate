@@ -1,4 +1,16 @@
- 
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 $main-font: 'Kanit', sans-serif;
+
+@mixin font-styles($font-family,$font-size,$font-color){
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $font-color;
+}
+
+@mixin font-gradient($angle , $color-one, $percent-color-one, $color-two, $percent-color-two){
+  background: linear-gradient(180deg,$color-one $percent-color-one, $color-two $percent-color-two);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

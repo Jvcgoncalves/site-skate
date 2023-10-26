@@ -4,26 +4,19 @@
   box-sizing: border-box;
 }
 
-// @mixin createElement(){
-//   background: linear-gradient(180deg,red 50%,blue 100%);
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-// }
-
 .container{
   min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  background: $bg-color;
+  background: $bg-color-2;
 }
 
 // Formatação do header
 
 #header{
   width: 100%;
-  height: 6.5rem;
+  height: 6rem;
   background: $main-color;
   display: flex;
   align-items: center;
@@ -48,9 +41,9 @@
     gap: 1.56rem;
 
     .itens-desktop-menu{
-      font-family: $main-font;
+      font-family: $main-font, sans-serif;
       font-size: 1.3rem;
-      color: $dark-font-color;
+      color: $light-text-color ; 
     }
   }
 
@@ -86,32 +79,38 @@
 // Formatação do conteúdo
 
 .content{
-  padding:0 3.5rem;
   display: grid;
 }
 
 .discount-itens-carousel{
-
+  padding:0 3.5rem;
+  position: relative;
   display: flex;
   width: 44rem;
   height: 25rem;
   align-items: center;
   margin: 0 auto;
+  
 
   .carousel-wrapper{
     position: relative;
     width: 100%;
     display: flex;
     overflow:hidden;
+    scroll-behavior: auto;
 
     .carousel{
       position: relative;
-      width: 200%;
-      display: flex;
-      gap: 3.125rem;
+      width: 500%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 3rem;
       pointer-events: none;
+      scroll-behavior: smooth;
+      transition: .5s;
     }
   }
+
   .carousel-img{
     width: 25rem;
     height: 23rem;
@@ -119,6 +118,74 @@
     img{
       width: 25rem;
       height: 23rem;
+    }
+  }
+
+  .slider-browser{
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    display: flex;
+    gap: .5rem;
+    
+  }
+}
+
+.promo-kits{
+   padding:0 3.5rem;
+  margin-top: 2.5rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: $dark-bg-color;
+
+  h3{
+    // font-styles($font-family,$font-size,$font-color)
+    //($angle , $color-one, $percent-color-one, $color-two, $percent-color-two)
+    @include font-styles($main-font, 2rem,none);
+    @include font-gradient(180deg,$light-text-color,10%,$main-color,70%)
+  }
+
+  .kits-div{
+    display: grid;
+    gap: .8rem;
+    grid-template-areas: 
+    "image_1 image_2 image_5"
+    "image_3 image_4 image_5";
+    
+    .kits-img{
+      width: 13rem;
+      height: 13rem;
+      display: flex;
+    }
+
+    .kits-img:first-child{
+      grid-area: image_1;
+    }
+
+    .kits-img:nth-child(2){
+      grid-area: image_2;
+    }
+    
+    .kits-img:nth-child(3){
+      grid-area: image_5;
+      width: 15rem;
+      height: auto;
+    }
+
+    .kits-img:nth-child(4){
+      grid-area: image_3;
+    }
+
+    .kits-img:nth-child(5){
+      grid-area: image_4;
+    }
+
+    .kit-images{
+      width: 100%;
+      height: 100%;
     }
   }
 }
