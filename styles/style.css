@@ -1,9 +1,177 @@
-#as p {
-  background: linear-gradient(180deg, red 50%, blue 100%);
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@keyframes moveText {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -50%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #EBEBEB;
+}
+
+#header {
+  width: 100%;
+  height: 6rem;
+  background: #B00700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3.5rem;
+}
+
+.header-itens {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-itens img[src="images/header/LOGO.png"] {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.header-itens .desktop-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.56rem;
+}
+.header-itens .desktop-menu .itens-desktop-menu {
+  font-family: "Kanit", sans-serif, sans-serif;
+  font-size: 1.3rem;
+  color: #F3F4E8;
+}
+.header-itens .user-desktop-menu {
+  display: flex;
+  max-height: 5rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+.header-itens .user-desktop-menu img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.discount-message {
+  width: 100%;
+  background-color: #222222;
+  padding: 0.3rem;
+  text-align: end;
+  overflow: hidden;
+}
+.discount-message span {
+  position: relative;
+  font-size: 1.5rem;
+  font-family: "Kanit", sans-serif;
+  color: #F3F4E8;
+  animation: moveText 10s linear infinite;
+}
+
+.content {
+  display: grid;
+}
+
+.discount-itens-carousel {
+  padding: 0 3.5rem;
+  position: relative;
+  display: flex;
+  width: 44rem;
+  height: 25rem;
+  align-items: center;
+  margin: 0 auto;
+}
+.discount-itens-carousel .carousel-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: auto;
+}
+.discount-itens-carousel .carousel-wrapper .carousel {
+  position: relative;
+  width: 500%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+  pointer-events: none;
+  scroll-behavior: smooth;
+  transition: 0.5s;
+}
+.discount-itens-carousel .carousel-img {
+  width: 25rem;
+  height: 23rem;
+}
+.discount-itens-carousel .carousel-img img {
+  width: 25rem;
+  height: 23rem;
+}
+.discount-itens-carousel .slider-browser {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.promo-kits {
+  padding: 0 3.5rem;
+  margin-top: 2.5rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #212020;
+}
+.promo-kits h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  color: none;
+  background: linear-gradient(180deg, #F3F4E8 10%, #B00700 70%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3rem;
+}
+.promo-kits .kits-div {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-areas: "image_1 image_2 image_5" "image_3 image_4 image_5";
+}
+.promo-kits .kits-div .kits-img {
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+}
+.promo-kits .kits-div .kits-img:first-child {
+  grid-area: image_1;
+}
+.promo-kits .kits-div .kits-img:nth-child(2) {
+  grid-area: image_2;
+}
+.promo-kits .kits-div .kits-img:nth-child(3) {
+  grid-area: image_5;
+  width: 15rem;
+  height: auto;
+}
+.promo-kits .kits-div .kits-img:nth-child(4) {
+  grid-area: image_3;
+}
+.promo-kits .kits-div .kits-img:nth-child(5) {
+  grid-area: image_4;
+}
+.promo-kits .kits-div .kit-images {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

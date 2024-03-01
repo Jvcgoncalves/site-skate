@@ -1,16 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
-  <title>skate</title>
-</head>
-<body>
-  <div id="as">
-    <p>
-      fhjkashfkjashkj ajkshdjkfhkjsahfkja
-    </p>
-  </div>
-</body>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="module" src="scripts/index.js" defer></script>
+    <title>skate</title>
+  </head>
+  <body>
+    <!-- container principal com todo o conteúdo -->
+    <div class="container">
+      <header id="header">
+        <!-- Barra de navegação do site -->
+        <div class="header-itens">
+          <img src="images/header/LOGO.png" alt="logo">
+          <div class="desktop-menu">
+            <div class="itens-desktop-menu">
+              <span>TÊNIS</span> 
+              <span>
+                <img src="images/header/Vector 2.png" alt="">
+              </span>
+            </div>
+            <div class="itens-desktop-menu">
+              <span>SKATE</span> 
+              <span>
+                <img src="images/header/Vector 2.png" alt="">
+              </span>
+            </div>
+            <div class="itens-desktop-menu">
+              <span>ROUPAS</span> 
+              <span>
+                <img src="images/header/Vector 2.png" alt="">
+              </span>
+            </div>
+            <div class="itens-desktop-menu">
+              <span>ACESSÓRIOS</span> 
+              <span>
+                <img src="images/header/Vector 2.png" alt="">
+              </span>
+            </div>
+          </div>
+          <div class="user-desktop-menu">
+            <img src="images/header/USER.png" alt="">
+            <img src="images/header/CARRINHO.png" alt="">
+          </div>
+        </div>
+      </header>
+      <!-- mensagem de desconto com animação -->
+      <div class="discount-message">
+        <span>
+          TÊNIS COM DESCONTO DE 10%
+        </span>
+      </div>
+
+      <div class="content">
+        <!-- conteúdo principal da página -->
+        <div class="discount-itens-carousel">
+          <!-- carrossel de itens com desconto -->
+          <div class="carousel-wrapper">
+            <div class="carousel">
+              <div class="carousel-img" draggable="false">
+                <img src="images/content/tenis-1-formatado.png" alt="">
+              </div>
+              <div class="carousel-img" draggable="false">
+                <img src="images/content/tenis-2-formatado.png" alt="">
+              </div>
+              <div class="carousel-img" id="checked" draggable="false">
+                <img src="images/content/tenis-3-formatado.png" alt="">
+              </div>
+              <div class="carousel-img" draggable="false">
+                <img src="images/content/tenis-4-formatado.png" alt="">
+              </div>
+              <div class="carousel-img" draggable="false">
+                <img src="images/content/tenis-5-formatado.png" alt="">
+              </div>
+            </div>
+        </div>
+        <div class="slider-browser">
+          <!-- botões de navegação do carrossel -->
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+          <input type="radio" name="slider-browser" class="slider-browser-radio" >
+        </div>
+      </div>
+
+      <div class="promo-kits">
+        <h3>KITS EM PROMOÇÃO</h3>
+          <div class="kits-div">
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa bulls.png" alt="">
+          </div>
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa high.png" alt="">
+          </div>
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa high boys.png" alt="">
+          </div>
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa nike sb.png" alt="">
+          </div>
+          <div class="kits-img">
+            <img class="kit-images" src="images/content/kit de roupa vans.png" alt="">
+          </div>
+      </div>
+      <div></div>
+    </div>
+
+  </body>
 </html>
